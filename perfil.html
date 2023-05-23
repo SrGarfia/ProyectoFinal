@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Option 1: Include in HTML -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        <title>Universidades</title>
+       
+        <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+     <link rel="stylesheet" href="css.css">
+    </head>
+<body>
+   
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Mi Erasmus</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown">Universidades</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#uniFrancia">Francia</a></li>
+                  <li><a class="dropdown-item" href="#uniAlemania">Alemania</a></li>
+                  <li><a class="dropdown-item" href="#uniItalia">Italia</a></li>
+                  <li><a class="dropdown-item" href="#uniHolanda">Holanda</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="matriculacion.html">Matriculación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="perfil.html"> Mi Perfíl</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <form>
+        <div id="perfil">
+            <h2>Tu perfil</h2>
+            <fieldset>
+              <legend>Información personal</legend>
+              <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Miguel">
+              </div>
+              <div>
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Garfia Bermúdez">
+              </div>
+              <div>
+                <label for="aficiones">Carrera</label>
+                <input type="text" id="carrera" name="carrera" placeholder="Logística">
+              </div>
+              <div>
+                <label for="aficiones">Universidad:</label>
+                <input type="text" id="universidad" name="universidad" placeholder="US">
+              </div>
+              <div>
+                <label for="aficiones">Residencia:</label>
+                <input type="text" id="Residencia" name="Residencia" placeholder="Sevilla">
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Contraseña</legend>
+              <div>
+                <label for="contrasena-actual">Contraseña actual:</label>
+                <input type="password" id="contrasena-actual" name="contrasena-actual">
+              </div>
+              <div>
+                <label for="nueva-contrasena">Nueva contraseña:</label>
+                <input type="password" id="nueva-contrasena" name="nueva-contrasena">
+              </div>
+              <div>
+                <label for="confirmar-contrasena">Confirmar contraseña:</label>
+                <input type="password" id="confirmar-contrasena" name="confirmar-contrasena">
+              </div>
+            </fieldset>
+            <button id="editar-configuracion">Editar</button>
+          <button id="guardar-configuracion" style="display: none;">Guardar</button>
+           </div> 
+          </form>
+          
+          
+          <script>
+            const editarConfiguracionBtn = document.getElementById('editar-configuracion');
+            const guardarConfiguracionBtn = document.getElementById('guardar-configuracion');
+            const infoPersonal = document.querySelector('fieldset:nth-of-type(1)');
+            const contrasena = document.querySelector('fieldset:nth-of-type(2)');
+            
+            editarConfiguracionBtn.addEventListener('click', () => {
+              infoPersonal.disabled = false;
+              contrasena.disabled = false;
+              guardarConfiguracionBtn.style.display = 'block';
+              editarConfiguracionBtn.style.display = 'none';
+            });
+          
+            guardarConfiguracionBtn.addEventListener('click', () => {
+              infoPersonal.disabled = true;
+              contrasena.disabled = true;
+              guardarConfiguracionBtn.style.display = 'none';
+              editarConfiguracionBtn.style.display = 'block';
+            });
+          </script>
+
+</body>
+</html>
