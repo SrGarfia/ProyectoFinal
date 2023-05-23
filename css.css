@@ -44,3 +44,15 @@ h1{
 .nav-link{
     margin:  o auto;
 }
+
+.custom-img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% */
+    margin-top: 12%;
+  }
+  .custom-paragraph {
+    margin-top: 7%; /* Agrega un margen superior de 10px al párrafo */
+    font-size: 25px;
+  }
+  .list-group li{
+    margin-top: 4px;
+  }
